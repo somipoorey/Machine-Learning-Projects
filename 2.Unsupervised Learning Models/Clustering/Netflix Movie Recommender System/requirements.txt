@@ -1,0 +1,11 @@
+pickle
+flask
+flasgger
+numpy
+pandas
+matplotlib
+seaborn
+opencv-python
+tensorflow
+mlflow
+sklearn
