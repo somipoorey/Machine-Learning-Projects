@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>GenderApp</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">>
+        <style>
+            body {background-image: url('https://images.creativemarket.com/0.1.0/ps/5188303/1200/1200/m1/fpnw/wm0/347-%D0%BF%D1%80%D0%B5%D0%BE%D0%B1%D1%80%D0%B0%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%BD%D1%8B%D0%B9-.jpg?1539273214&s=85351f1a939f87c0b45373d8021d2563');background-repeat: no-repeat;background-attachment: fixed;background-position: center bottom;background-size: 400px 400px}
+        </style>
+        <div class="header">
+            <p>Submitted by: Anurag Yadav | Abhishek Mote</p>
+        </div>
+    </head>
+    <body>
+        <h1 class="text-center">Gender Detection Application</h1>
+
+        <form class="p-3 text-center" action="/", method="post" enctype="multipart/form-data">
+            <input class="form-control" type="file" name="imagefile">
+            <input class="btn btn-primary mt-3" type="submit" value="Predict Image">
+        </form>
+
+        {% if prediction == 1 %}
+            <p class="text-center" style="color:#e82561;font-size: 25px;">The Person is a Female {{prediction}}</p>
+        {% elif prediction == 0 %}
+            <p class="text-center" style="color:#28c0e5;font-size: 25px;">The Person is a Male {{prediction}}</p>
+        {% endif %}
+    </body>
+</html>
