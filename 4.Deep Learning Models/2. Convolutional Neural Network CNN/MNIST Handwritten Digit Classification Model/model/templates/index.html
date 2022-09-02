@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>MNIST</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">>
+        <style>
+            body {background-image: url('https://seeklogo.com/images/N/northwestern-wildcats-logo-97FBE404B8-seeklogo.com.png');background-repeat: no-repeat;background-attachment: fixed;background-position: top center;background-size: 50px 70px; background-color: rgb(255, 255, 255);}
+        </style>
+        <div class="header">
+            <p>Submitted by: Somi Poorey</p>
+        </div>
+    </head>
+    <body>
+        <h1 class="text-center">Digit Recognition Application - MNIST</h1>
+
+        <form class="p-3 text-center" action="/", method="post" enctype="multipart/form-data">
+            <input class="form-control" type="file" name="imagefile">
+            <input class="btn btn-primary mt-3" type="submit" value="Predict Digit">
+        </form>
+
+        {% if prediction == "empty"  %}
+            <p class="text-center" style="color:#570bc2;font-size: 25px;">Please Upload an Image. Try again !!</p>
+        {% elif prediction == 0 %}
+            <p class="text-center" style="color:#f10f53;font-size: 25px;">The Number is ZERO {{prediction}} , which is EVEN</p>
+        {% elif prediction == 1 %}
+            <p class="text-center" style="color:#19c1ea;font-size: 25px;">The Number is ONE {{prediction}} , which is ODD</p>
+        {% elif prediction == 2 %}
+            <p class="text-center" style="color:#0eeb58;font-size: 25px;">The Number is TWO {{prediction}} , which is EVEN</p>
+        {% elif prediction == 3 %}
+            <p class="text-center" style="color:#284ee5;font-size: 25px;">The Number is THREE {{prediction}} , which is ODD</p>
+        {% elif prediction == 4 %}
+            <p class="text-center" style="color:#c9e528;font-size: 25px;">The Number is FOUR {{prediction}} , which is EVEN</p>
+        {% elif prediction == 5 %}
+            <p class="text-center" style="color:#e5282b;font-size: 25px;">The Number is FIVE {{prediction}} , which is ODD</p>
+        {% elif prediction == 6 %}
+            <p class="text-center" style="color:#e59628;font-size: 25px;">The Number is SIX {{prediction}} , which is EVEN</p>
+        {% elif prediction == 7 %}
+            <p class="text-center" style="color:#2b7606;font-size: 25px;">The Number is SEVEN {{prediction}} , which is ODD</p>
+        {% elif prediction == 8 %}
+            <p class="text-center" style="color:#1a2b2f;font-size: 25px;">The Number is EIGHT {{prediction}} , which is EVEN</p>
+        {% elif prediction == 9 %}
+            <p class="text-center" style="color:#62078c;font-size: 25px;">The Number is NINE {{prediction}} , which is ODD</p>
+        {% endif %}
+    </body>
+</html>
